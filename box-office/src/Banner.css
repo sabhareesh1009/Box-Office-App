@@ -49,6 +49,7 @@
 
 .banner--fadeBottom {
   height: 7.4rem;
+  z-index: -1;
   background-image: linear-gradient(
     180deg,
     transparent,

@@ -1,6 +1,6 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { logout, selectUser } from "../features/counter/userSlice";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/counter/userSlice";
 import { auth } from "../firebase";
 import Nav from "../Nav";
 import PlansScreen from "./PlansScreen";
@@ -8,11 +8,6 @@ import "./ProfileScreen.css";
 
 function ProfileScreen() {
   const user = useSelector(selectUser);
-  const dispatch = useDispatch();
-  // const signout = () => {
-  //   dispatch(logout);
-  //   // auth.signOut();
-  // };
 
   return (
     <div className="profileScreen">

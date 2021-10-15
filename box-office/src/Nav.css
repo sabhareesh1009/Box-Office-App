@@ -18,8 +18,8 @@
 .nav__logo {
   position: fixed;
   top: 25px;
-  left: 0;
-  width: 80px;
+  left: 1;
+  width: 150px;
   cursor: pointer;
   object-fit: contain;
   padding-left: 20px;

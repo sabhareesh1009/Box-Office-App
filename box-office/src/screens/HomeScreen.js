@@ -11,7 +11,7 @@ function HomeScreen() {
       <Nav />
       <Banner />
       <Row
-        title="NETFLIX ORIGINALS"
+        title="BOX OFFICE ORIGINALS"
         fetchUrl={requests.fetchTrending}
         isLargeRow={true}
       />

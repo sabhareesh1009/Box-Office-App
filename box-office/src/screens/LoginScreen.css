@@ -66,11 +66,13 @@
 }
 
 .loginScreen__logo {
+  cursor: pointer;
   position: fixed;
   left: 0;
-  width: 150px;
+  width: 175px;
   object-fit: contain;
   padding-left: 20px;
+  padding-top: 10px;
 }
 
 .loginScreen__input {

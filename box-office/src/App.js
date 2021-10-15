@@ -21,6 +21,7 @@ function App() {
 
   useEffect(() => {
     const unSubscribe = auth.onAuthStateChanged((userAuth) => {
+      console.log("userrrr", user);
       if (userAuth) {
         //logged in
         console.log(userAuth);
@@ -33,6 +34,7 @@ function App() {
       } else {
         // logged out
         dispatch(logout());
+        console.log("userrrr", user);
       }
     });
 
@@ -42,9 +44,7 @@ function App() {
   return (
     <div className="app">
       <Router>
-        {!user ? (
-          <LoginScreen />
-        ) : (
+        {user ? (
           <Switch>
             <Route exact path="/profile">
               <ProfileScreen />
@@ -53,6 +53,8 @@ function App() {
               <HomeScreen />
             </Route>
           </Switch>
+        ) : (
+          <LoginScreen />
         )}
       </Router>
     </div>

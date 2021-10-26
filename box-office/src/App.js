@@ -33,7 +33,7 @@ function App() {
         );
       } else {
         // logged out
-        dispatch(logout());
+        dispatch(() => logout());
         console.log("userrrr", user);
       }
     });

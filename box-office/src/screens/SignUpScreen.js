@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { auth } from "../firebase";
 import "./SignUpScreen.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SignUpScreen() {
   const emailRef = useRef(null);
@@ -16,6 +18,7 @@ function SignUpScreen() {
         passwordRef.current.value
       )
       .then((authUser) => {
+        toast.success("Welcome to Box office")
         console.log(authUser, "userrrrr");
       });
   };
@@ -29,13 +32,16 @@ function SignUpScreen() {
       )
       .then((authUser) => {
         console.log(authUser, "signnnn");
+      })
+      .catch((error) => {
+        toast.error("Invalid Password");
       });
   };
 
   return (
     <div className="signupScreen">
       {console.log(signUpScr, "signupusrrrr")}
-      { signUpScr ? (
+      {signUpScr ? (
         <form>
           <h1>Sign Up</h1>
           <input ref={userName} placeholder="User Name" type="text" />
@@ -44,9 +50,13 @@ function SignUpScreen() {
           <button type="submit" onClick={register}>
             Sign Up
           </button>
+          <ToastContainer />
           <h4>
             <span className="signupScreen_gray">Already with Box Office? </span>
-            <span className="signupScreen_link" onClick={() => setSignUpScr(false)}>
+            <span
+              className="signupScreen_link"
+              onClick={() => setSignUpScr(false)}
+            >
               Login here
             </span>
           </h4>
@@ -59,9 +69,13 @@ function SignUpScreen() {
           <button type="submit" onClick={signIn}>
             Sign In
           </button>
+          <ToastContainer />
           <h4>
             <span className="signupScreen_gray">New to Box Office? </span>
-            <span className="signupScreen_link" onClick={() => setSignUpScr(true)}>
+            <span
+              className="signupScreen_link"
+              onClick={() => setSignUpScr(true)}
+            >
               Sign Up now.
             </span>
           </h4>

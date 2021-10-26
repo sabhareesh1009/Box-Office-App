@@ -7,7 +7,7 @@
 }
 
 .loginScreen__background {
-  /* text-align: center; */
+  text-align: center;
 }
 
 .loginScreen__gradient {
@@ -25,7 +25,7 @@
 
 .loginScreen__body {
   position: absolute;
-  top: 30%;
+  top: 20%;
   margin-right: auto;
   margin-left: auto;
   text-align: center;

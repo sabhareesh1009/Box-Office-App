@@ -17,12 +17,12 @@
 
 .nav__logo {
   position: fixed;
-  top: 25px;
+  top: 15px;
   left: 1;
-  width: 150px;
+  width: 60px;
+  height: 50px;
   cursor: pointer;
   object-fit: contain;
-  padding-left: 20px;
 }
 
 .nav__black {

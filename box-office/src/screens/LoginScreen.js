@@ -8,7 +8,7 @@ function LoginScreen() {
       <div className="loginScreen__background">
         <img
           className="loginScreen__logo"
-          src="https://image.shutterstock.com/image-vector/box-office-banner-alphabet-sign-260nw-769782991.jpg"
+          src="https://st2.depositphotos.com/1186248/5577/i/950/depositphotos_55772185-stock-photo-box-office.jpg"
           alt=""
         />
         {/* <img

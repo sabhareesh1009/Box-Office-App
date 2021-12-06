@@ -1,6 +1,6 @@
 .loginScreen {
   position: relative;
-  height: 100%;
+  height: 100vh;
   background: url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg") center
     no-repeat;
   background-size: cover;

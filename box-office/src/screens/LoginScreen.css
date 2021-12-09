@@ -1,9 +1,10 @@
 .loginScreen {
   position: relative;
   height: 100vh;
-  background: url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg") center
-    no-repeat;
+  background: url("https://cdn.hipwallpaper.com/i/98/21/dUyCkp.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .loginScreen__background {

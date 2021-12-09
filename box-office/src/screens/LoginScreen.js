@@ -11,11 +11,6 @@ function LoginScreen() {
           src="https://st2.depositphotos.com/1186248/5577/i/950/depositphotos_55772185-stock-photo-box-office.jpg"
           alt=""
         />
-        {/* <img
-          className="loginScreen__logo"
-          src="https://styles.redditmedia.com/t5_2r1ky/styles/communityIcon_rypvqsac5up21.png"
-          alt=""
-        />  */}
 
         <button onClick={() => setSignIn(true)} className="loginScreen__button">
           Sign In

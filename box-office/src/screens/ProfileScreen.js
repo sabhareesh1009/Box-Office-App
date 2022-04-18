@@ -1,6 +1,7 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { selectUser } from "../features/counter/userSlice";
+import { logout, selectUser } from "../features/counter/userSlice";
 import { auth } from "../firebase";
 import Nav from "../Nav";
 import PlansScreen from "./PlansScreen";
@@ -8,6 +9,13 @@ import "./ProfileScreen.css";
 
 function ProfileScreen() {
   const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  const signOut = () => {
+    auth.signOut().then((res) => {
+      dispatch(logout());
+    });
+  };
 
   return (
     <div className="profileScreen">
@@ -25,10 +33,7 @@ function ProfileScreen() {
               <h3>Plans</h3>
               <PlansScreen />
             </div>
-            <button
-              className="profileScreen__signout"
-              onClick={() => auth.signOut()}
-            >
+            <button className="profileScreen__signout" onClick={signOut}>
               Signout
             </button>
           </div>

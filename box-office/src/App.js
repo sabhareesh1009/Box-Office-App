@@ -23,7 +23,6 @@ function App() {
     const unSubscribe = auth.onAuthStateChanged((userAuth) => {
       console.log("userrrr", user);
       if (userAuth) {
-        //logged in
         console.log(userAuth);
         dispatch(
           login({
@@ -32,19 +31,19 @@ function App() {
           })
         );
       } else {
-        // logged out
-        dispatch(() => logout());
-        console.log("userrrr", user);
+        dispatch(logout());
       }
     });
 
     return unSubscribe;
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="app">
       <Router>
-        {user ? (
+        {!user ? (
+          <LoginScreen />
+        ) : (
           <Switch>
             <Route exact path="/profile">
               <ProfileScreen />
@@ -53,8 +52,6 @@ function App() {
               <HomeScreen />
             </Route>
           </Switch>
-        ) : (
-          <LoginScreen />
         )}
       </Router>
     </div>
